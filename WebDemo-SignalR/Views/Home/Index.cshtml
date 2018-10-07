@@ -3,16 +3,20 @@
 }
 
 <div class="jumbotron">
-    <h1>Demo Signal R - Chat</h1>
+    <h2>Demo Signal R - Chat</h2>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <input type="text" placeholder="Your name" data-bind="value:username" />
-        <input type="text" placeholder="Input post" data-bind="value:post" />
-        <button class="btn btn-primary" data-bind="click:sendPost">Submit</button>
-
-        <div data-bind="foreach:postList">
+    <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Input post" data-bind="value:post" />
+        <br />
+        <input type="text" class="form-control pull-left" placeholder="Your name" data-bind="value:username" style="width:40%;" />
+        <button class="btn btn-primary pull-right" data-bind="click:sendPost">Submit</button>
+        <div class="clearfix"></div>
+        <br />
+    </div>
+    <div class="col-sm-6">
+        <div class="jumbotron" data-bind="foreach:postList">
             <div data-bind="text: $data"></div>
         </div>
     </div>
